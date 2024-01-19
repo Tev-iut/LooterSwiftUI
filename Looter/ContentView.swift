@@ -11,20 +11,36 @@ struct ContentView: View {
     @Binding var document: LooterDocument
     
     @State var loot = ["Épée", "Bouclier", "Armure"]
+    @State var showAddItemView : Bool = false
     
     func addItem() {
         loot.append("Magie de feu")
     }
 
     var body: some View {
-        List {
-            Button(action: {
-                addItem()
-            }, label: {
-                Text("Ajouter")
+        NavigationStack {
+            List {
+                Button(action: {
+                    addItem()
+                }, label: {
+                    Text("Ajouter")
+                })
+                ForEach(loot, id: \.self) { item in
+                    Text(item)
+                }
+            }.sheet(isPresented: $showAddItemView, content: {
+                AddItemView()
             })
-            ForEach(loot, id: \.self) { item in Text(item)
-            }
+            .navigationBarTitle("Loot")
+            .toolbar(content: {
+                ToolbarItem(placement: ToolbarItemPlacement.automatic) {
+                    Button(action: {
+                        showAddItemView.toggle()
+                    }, label: {
+                        Image(systemName: "plus.circle.fill")
+                    })
+                }
+            })
         }
     }
 }
