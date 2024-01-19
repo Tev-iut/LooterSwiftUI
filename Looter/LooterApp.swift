@@ -11,7 +11,7 @@ import SwiftUI
 struct LooterApp: App {
     var body: some Scene {
         DocumentGroup(newDocument: LooterDocument()) { file in
-            ContentView(document: file.$document)
+            ContentView()
         }
     }
 }

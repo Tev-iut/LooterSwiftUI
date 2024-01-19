@@ -7,29 +7,45 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @Binding var document: LooterDocument
+class Inventory : ObservableObject {
     
-    @State var loot = ["Épée", "Bouclier", "Armure"]
-    @State var showAddItemView : Bool = false
+    @Published var loot: [LootItem] = [
+        LootItem(quantity: 1, name: "Épée de feu", type: .fire, rarity: .rare, attackStrength: 10, game: availableGames[0]),
+        LootItem(quantity: 2, name: "Bouclier de glace", type: .ice, rarity: .common, attackStrength: 5, game: availableGames[1]),
+        LootItem(quantity: 3, name: "Anneau de vent", type: .wind, rarity: .legendary, attackStrength: 15, game: availableGames[2]),
+    ]
     
-    func addItem() {
-        loot.append("Magie de feu")
+    func addItem(item: LootItem) {
+        loot.append(item)
     }
+}
+
+struct ContentView: View {
+    @StateObject var inventory = Inventory()
+    
+    @State var showAddItemView : Bool = false
 
     var body: some View {
         NavigationStack {
             List {
-                Button(action: {
-                    addItem()
-                }, label: {
-                    Text("Ajouter")
-                })
-                ForEach(loot, id: \.self) { item in
-                    Text(item)
+                ForEach(inventory.loot, id: \.id) { item in
+                    HStack{
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .foregroundColor(item.rarity.color)
+                        
+                        Text(item.name)
+                        Text("Quantity : \(item.quantity)")
+                        
+                        Spacer()
+                        Text(item.type.rawValue)
+                        //Circle()
+                        
+                        //Text("Quantité :", item.quantity)
+                    }
                 }
             }.sheet(isPresented: $showAddItemView, content: {
-                AddItemView()
+                AddItemView().environmentObject(inventory)
             })
             .navigationBarTitle("Loot")
             .toolbar(content: {
@@ -46,5 +62,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(document: .constant(LooterDocument()))
+    ContentView()
 }
