@@ -30,14 +30,14 @@ struct ContentView: View {
             List {
                 ForEach(inventory.loot, id: \.id) { item in
                     HStack{
-                        Circle()
-                            .frame(width: 10, height: 10)
-                            .foregroundColor(item.rarity.color)
                         
-                        Text(item.name)
-                        Text("Quantity : \(item.quantity)")
+                            Circle()
+                                .frame(width: 10, height: 10)
+                                .foregroundColor(item.rarity.color)
+                            Text(item.name + "\n" + "Quantity : \(item.quantity)")
                         
                         Spacer()
+
                         Text(item.type.rawValue)
                         //Circle()
                         

@@ -38,9 +38,9 @@
 				<key>leading</key>
 				<string>    case fire = "🔥"
     case ice = "🧊"
-    case wind = "💨"</string>
+    case wind = </string>
 				<key>trailing</key>
-				<string>
+				<string>"💨"
     case poison = "☠️"
     case thunder = "🌩️"
 </string>
@@ -82,9 +82,9 @@
 				<key>leading</key>
 				<string>    case fire = "🔥"
     case ice = "🧊"
-    case wind = "💨"</string>
+    case wind = </string>
 				<key>trailing</key>
-				<string>
+				<string>"💨"
     case poison = "☠️"
     case thunder = "🌩️"
 </string>
@@ -126,9 +126,9 @@
 				<key>leading</key>
 				<string>    case fire = "🔥"
     case ice = "🧊"
-    case wind = "💨"</string>
+    case wind = </string>
 				<key>trailing</key>
-				<string>
+				<string>"💨"
     case poison = "☠️"
     case thunder = "🌩️"
 </string>
