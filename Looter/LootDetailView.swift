@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LootDetailView: View {
     @State var item: LootItem
+    @State private var isAnimated = false
     
     var body: some View {
         VStack{
@@ -17,12 +18,22 @@ struct LootDetailView: View {
                         .foregroundColor(item.rarity.color)
                         .frame(width: 100, height: 100)
                         .font(.system(size: 40))
-                    
                 }
                 .background(Color(item.rarity.color))
                 .cornerRadius(30)
-                .shadow(color: Color(item.rarity.color), radius: 30)
                 .padding(50)
+                .font(.largeTitle)
+                .rotation3DEffect(
+                    .degrees(isAnimated ? 360 : 0),
+                    axis: (x:1.0, y:0.5, z:0.0)
+                )
+                .animation(.bouncy.delay(0.4), value: isAnimated)
+                .shadow(color: Color(item.rarity.color), radius: isAnimated ? 100 : 0)
+                .animation(.bouncy.delay(0.6), value: isAnimated)
+                .onAppear {
+                    isAnimated.toggle()
+                }
+
                 
                 Text(item.name)
                     .font(.system(size: 30))
