@@ -27,11 +27,11 @@ struct LootDetailView: View {
                     .degrees(isAnimated ? 360 : 0),
                     axis: (x:1.0, y:0.5, z:0.0)
                 )
-                .animation(.bouncy.delay(0.4), value: isAnimated)
-                .shadow(color: Color(item.rarity.color), radius: isAnimated ? 100 : 0)
-                .animation(.bouncy.delay(0.6), value: isAnimated)
-                .onAppear {
-                    isAnimated.toggle()
+                .animation(.spring.delay(0.4), value: isAnimated)
+                .shadow(color: Color(item.rarity.color), radius: isAnimated ? 30 : 0)
+                .animation(.bouncy.delay(0.2), value: isAnimated)
+                .task {
+                    isAnimated = true
                 }
 
                 
