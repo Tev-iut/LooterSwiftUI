@@ -15,6 +15,7 @@
 		385F75082B5A836000B0D26A /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F75072B5A836000B0D26A /* AddItemView.swift */; };
 		385F750A2B5AB02600B0D26A /* LootItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F75092B5AB02600B0D26A /* LootItem.swift */; };
 		385F750C2B5AB71800B0D26A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F750B2B5AB71800B0D26A /* Game.swift */; };
+		38DF46C12B5FB18F0011747F /* LootDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF46C02B5FB18F0011747F /* LootDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		385F75072B5A836000B0D26A /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		385F75092B5AB02600B0D26A /* LootItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootItem.swift; sourceTree = "<group>"; };
 		385F750B2B5AB71800B0D26A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		38DF46C02B5FB18F0011747F /* LootDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				385F74F82B5A7AD500B0D26A /* LooterDocument.swift */,
 				385F74FA2B5A7AD500B0D26A /* ContentView.swift */,
 				385F75072B5A836000B0D26A /* AddItemView.swift */,
+				38DF46C02B5FB18F0011747F /* LootDetailView.swift */,
 				385F75092B5AB02600B0D26A /* LootItem.swift */,
 				385F74FC2B5A7AD700B0D26A /* Assets.xcassets */,
 				385F75012B5A7AD700B0D26A /* Info.plist */,
@@ -156,6 +159,7 @@
 				385F74F92B5A7AD500B0D26A /* LooterDocument.swift in Sources */,
 				385F74FB2B5A7AD500B0D26A /* ContentView.swift in Sources */,
 				385F75082B5A836000B0D26A /* AddItemView.swift in Sources */,
+				38DF46C12B5FB18F0011747F /* LootDetailView.swift in Sources */,
 				385F750A2B5AB02600B0D26A /* LootItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

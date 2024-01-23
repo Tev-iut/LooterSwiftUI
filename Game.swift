@@ -22,9 +22,10 @@ struct Game: Identifiable, Hashable {
 
 // Hesitez pas mettre vos propres jeux dans la liste
 let availableGames = [
-    Game(name: "Elden Ring", genre: .rpg, coverName: "Assets/co4jni.png"),
-    Game(name: "Skyrim", genre: .rpg, coverName: "hAssets/co1tnw.png"),
-    Game(name: "WoW", genre: .mmorpg, coverName: "Assets/co68u6.png"),
-    Game(name: "CS:GO", genre: .fps, coverName: "Assets/co6996.png"),
-    Game(name: "Diablo IV", genre: .looter, coverName: "Assets/co69sm.png")
+    Game(name: "Elden Ring", genre: .rpg, coverName: "co4jni"),
+    Game(name: "Skyrim", genre: .rpg, coverName: "co1tnw"),
+    Game(name: "WoW", genre: .mmorpg, coverName: "co68u6"),
+    Game(name: "CS:GO", genre: .fps, coverName: "co6996"),
+    Game(name: "Diablo IV", genre: .looter, coverName: "co69sm"),
+    Game(name: "Diablo 10", genre: .looter, coverName: nil)
 ]

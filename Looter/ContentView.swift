@@ -29,8 +29,9 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(inventory.loot, id: \.id) { item in
-                    HStack{
-                        
+                    NavigationLink{ LootDetailView(item: item) } label: {
+                        HStack{
+                            
                             Circle()
                                 .frame(width: 10, height: 10)
                                 .foregroundColor(item.rarity.color)
@@ -39,25 +40,23 @@ struct ContentView: View {
                         Spacer()
 
                         Text(item.type.rawValue)
-                        //Circle()
-                        
-                        //Text("Quantité :", item.quantity)
+                        }
                     }
                 }
-            }.sheet(isPresented: $showAddItemView, content: {
-                AddItemView().environmentObject(inventory)
-            })
-            .navigationBarTitle("Loot")
-            .toolbar(content: {
-                ToolbarItem(placement: ToolbarItemPlacement.automatic) {
-                    Button(action: {
-                        showAddItemView.toggle()
-                    }, label: {
-                        Image(systemName: "plus.circle.fill")
-                    })
-                }
-            })
-        }
+                }.sheet(isPresented: $showAddItemView, content: {
+                    AddItemView().environmentObject(inventory)
+                })
+                .navigationBarTitle("Loot")
+                .toolbar(content: {
+                    ToolbarItem(placement: ToolbarItemPlacement.automatic) {
+                        Button(action: {
+                            showAddItemView.toggle()
+                        }, label: {
+                            Image(systemName: "plus.circle.fill")
+                        })
+                    }
+                })
+            }
     }
 }
 
