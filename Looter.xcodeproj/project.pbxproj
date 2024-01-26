@@ -17,6 +17,10 @@
 		385F75082B5A836000B0D26A /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F75072B5A836000B0D26A /* AddItemView.swift */; };
 		385F750A2B5AB02600B0D26A /* LootItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F75092B5AB02600B0D26A /* LootItem.swift */; };
 		385F750C2B5AB71800B0D26A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F750B2B5AB71800B0D26A /* Game.swift */; };
+		38D5B18D2B63E32F000FF757 /* LootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5B18C2B63E32F000FF757 /* LootView.swift */; };
+		38D5B18F2B63E337000FF757 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5B18E2B63E337000FF757 /* WishListView.swift */; };
+		38D5B1912B63E33F000FF757 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5B1902B63E33F000FF757 /* ProfileView.swift */; };
+		38D5B1932B63E3D3000FF757 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5B1922B63E3D3000FF757 /* Inventory.swift */; };
 		38DF46C12B5FB18F0011747F /* LootDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF46C02B5FB18F0011747F /* LootDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		385F75072B5A836000B0D26A /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		385F75092B5AB02600B0D26A /* LootItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootItem.swift; sourceTree = "<group>"; };
 		385F750B2B5AB71800B0D26A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		38D5B18C2B63E32F000FF757 /* LootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootView.swift; sourceTree = "<group>"; };
+		38D5B18E2B63E337000FF757 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
+		38D5B1902B63E33F000FF757 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		38D5B1922B63E3D3000FF757 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		38DF46C02B5FB18F0011747F /* LootDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +80,10 @@
 				38022EDB2B639C9500F2FBE8 /* OnBoardingPageView.swift */,
 				385F74F82B5A7AD500B0D26A /* LooterDocument.swift */,
 				385F74FA2B5A7AD500B0D26A /* ContentView.swift */,
+				38D5B18C2B63E32F000FF757 /* LootView.swift */,
+				38D5B1922B63E3D3000FF757 /* Inventory.swift */,
+				38D5B18E2B63E337000FF757 /* WishListView.swift */,
+				38D5B1902B63E33F000FF757 /* ProfileView.swift */,
 				385F75072B5A836000B0D26A /* AddItemView.swift */,
 				38DF46C02B5FB18F0011747F /* LootDetailView.swift */,
 				385F75092B5AB02600B0D26A /* LootItem.swift */,
@@ -160,12 +172,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D5B18D2B63E32F000FF757 /* LootView.swift in Sources */,
 				38022EDC2B639C9500F2FBE8 /* OnBoardingPageView.swift in Sources */,
 				385F74F72B5A7AD500B0D26A /* LooterApp.swift in Sources */,
+				38D5B1932B63E3D3000FF757 /* Inventory.swift in Sources */,
 				385F750C2B5AB71800B0D26A /* Game.swift in Sources */,
+				38D5B1912B63E33F000FF757 /* ProfileView.swift in Sources */,
 				385F74F92B5A7AD500B0D26A /* LooterDocument.swift in Sources */,
 				385F74FB2B5A7AD500B0D26A /* ContentView.swift in Sources */,
 				385F75082B5A836000B0D26A /* AddItemView.swift in Sources */,
+				38D5B18F2B63E337000FF757 /* WishListView.swift in Sources */,
 				38022ED82B63987B00F2FBE8 /* OnboardingView.swift in Sources */,
 				38DF46C12B5FB18F0011747F /* LootDetailView.swift in Sources */,
 				385F750A2B5AB02600B0D26A /* LootItem.swift in Sources */,

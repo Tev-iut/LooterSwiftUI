@@ -7,59 +7,32 @@
 
 import SwiftUI
 
-class Inventory : ObservableObject {
-    
-    @Published var loot: [LootItem] = [
-        LootItem(quantity: 1, name: "Épée de feu", type: .fire, rarity: .rare, attackStrength: 10, game: availableGames[0]),
-        LootItem(quantity: 2, name: "Bouclier de glace", type: .ice, rarity: .common, attackStrength: 5, game: availableGames[1]),
-        LootItem(quantity: 3, name: "Anneau de vent", type: .wind, rarity: .legendary, attackStrength: 15, game: availableGames[2]),
-    ]
-    
-    func addItem(item: LootItem) {
-        loot.append(item)
-    }
+enum LooterFeature {
+    case loot
+    case wishList
+    case profile
 }
 
 struct ContentView: View {
-    @StateObject var inventory = Inventory()
-    
-    @State var showAddItemView : Bool = false
+    @State private var selectedFeature: LooterFeature = .loot
 
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(inventory.loot, id: \.id) { item in
-                    NavigationLink{ LootDetailView(item: item) } label: {
-                        HStack{
-                            
-                            Circle()
-                                .frame(width: 10, height: 10)
-                                .foregroundColor(item.rarity.color)
-                            Text(item.name + "\n" + "Quantity : \(item.quantity)")
-                        
-                        Spacer()
-
-                        Text(item.type.rawValue)
-                        }
-                    }
+        TabView(selection: $selectedFeature) {
+            LootView()
+                .tabItem {
+                    Label("Loot", systemImage: "gym.bag.fill")
                 }
-                }.sheet(isPresented: $showAddItemView, content: {
-                    AddItemView().environmentObject(inventory)
-                })
-                .navigationBarTitle("Loot")
-                .toolbar(content: {
-                    ToolbarItem(placement: ToolbarItemPlacement.automatic) {
-                        Button(action: {
-                            showAddItemView.toggle()
-                        }, label: {
-                            Image(systemName: "plus.circle.fill")
-                        })
-                    }
-                })
-            }
-        @AppStorage("isOnBoardingDone") var isOnBoardingDone: Bool = false
-        Button("Remttre le onboarding a false"){
-            isOnBoardingDone = false
+                .tag(LooterFeature.loot)
+            WishListView()
+                .tabItem {
+                    Label("Wishlist", systemImage: "wand.and.stars")
+                }
+                .tag(LooterFeature.wishList)
+            ProfileView()
+                .tabItem {
+                    Label("Profil", systemImage: "person.fill")
+                }
+                .tag(LooterFeature.profile)
         }
     }
 }
