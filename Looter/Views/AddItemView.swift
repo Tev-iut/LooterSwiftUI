@@ -44,6 +44,7 @@ struct AddItemView: View {
     @State var isAttack : Bool = false
     @State var attackStrength : Int = 0
     
+    
     var body: some View {
         Form {
             Section {

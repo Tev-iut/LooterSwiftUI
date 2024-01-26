@@ -17,7 +17,6 @@ struct LootView: View {
                 ForEach(inventory.loot, id: \.id) { item in
                     NavigationLink{ LootDetailView(item: item) } label: {
                         HStack{
-                            
                             Circle()
                                 .frame(width: 10, height: 10)
                                 .foregroundColor(item.rarity.color)
@@ -29,6 +28,7 @@ struct LootView: View {
                         }
                     }
                 }
+                .onDelete(perform: delete)
                 }.sheet(isPresented: $showAddItemView, content: {
                     AddItemView().environmentObject(inventory)
                 })
@@ -47,6 +47,10 @@ struct LootView: View {
                 isOnBoardingDone = false
             }
         }
+    }
+    
+    func delete(at offsets: IndexSet) {
+        inventory.loot.remove(atOffsets: offsets)
     }
 }
 

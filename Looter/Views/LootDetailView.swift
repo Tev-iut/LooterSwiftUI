@@ -10,35 +10,36 @@ import SwiftUI
 struct LootDetailView: View {
     @State var item: LootItem
     @State private var isAnimated = false
+    @State var showAddItemView : Bool = false
     
     var body: some View {
         VStack{
-                VStack {
-                    Text(item.type.rawValue)
-                        .foregroundColor(item.rarity.color)
-                        .frame(width: 100, height: 100)
-                        .font(.system(size: 40))
-                }
-                .background(Color(item.rarity.color))
-                .cornerRadius(30)
-                .padding(50)
-                .font(.largeTitle)
-                .rotation3DEffect(
-                    .degrees(isAnimated ? 360 : 0),
-                    axis: (x:1.0, y:0.5, z:0.0)
-                )
-                .animation(.spring.delay(0.4), value: isAnimated)
-                .shadow(color: Color(item.rarity.color), radius: isAnimated ? 30 : 0)
-                .animation(.bouncy.delay(0.2), value: isAnimated)
-                .task {
-                    isAnimated = true
-                }
-
-                
-                Text(item.name)
-                    .font(.system(size: 30))
-                    .bold()
-                    .foregroundStyle(item.rarity.color)
+            ZStack {
+                Text(item.type.rawValue)
+                    .foregroundColor(item.rarity.color)
+                    .frame(width: 100, height: 100)
+                    .font(.system(size: 40))
+            }
+            .background(Color(item.rarity.color))
+            .cornerRadius(30)
+            .padding(50)
+            .font(.largeTitle)
+            .rotation3DEffect(
+                .degrees(isAnimated ? 360 : 0),
+                axis: (x:1.0, y:0.5, z:0.0)
+            )
+            .animation(.spring.delay(0.4), value: isAnimated)
+            .shadow(color: Color(item.rarity.color), radius: isAnimated ? 30 : 0)
+            .animation(.bouncy.delay(0.2), value: isAnimated)
+            .task {
+                isAnimated = true
+            }
+            
+            
+            Text(item.name)
+                .font(.system(size: 30))
+                .bold()
+                .foregroundStyle(item.rarity.color)
             
             if (item.rarity == Rarity.unique){
                 VStack{
@@ -88,7 +89,7 @@ struct LootDetailView: View {
                         }
                         Text("Possédé(s) : \(item.quantity)")
                         Text("Rareté : \(item.rarity.rawValue)")
-
+                        
                     } header : {
                         Text("INFORMATIONS")
                     }
@@ -96,6 +97,20 @@ struct LootDetailView: View {
                 }
             }
         }
+        .sheet(isPresented: $showAddItemView, content: {
+            EditItemView()
+        })
+        .toolbar(content: {
+            ToolbarItem(placement: ToolbarItemPlacement.automatic) {
+                Button(action: {
+                    showAddItemView.toggle()
+                }, label: {
+                    Image(systemName: "pencil")
+                    Text("Edit")
+                })
+            }
+
+        })
     }
 }
 

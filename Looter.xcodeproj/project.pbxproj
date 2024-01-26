@@ -21,6 +21,7 @@
 		38D5B18F2B63E337000FF757 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5B18E2B63E337000FF757 /* WishListView.swift */; };
 		38D5B1912B63E33F000FF757 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5B1902B63E33F000FF757 /* ProfileView.swift */; };
 		38D5B1932B63E3D3000FF757 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5B1922B63E3D3000FF757 /* Inventory.swift */; };
+		38D5B1962B63E865000FF757 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5B1952B63E865000FF757 /* EditItemView.swift */; };
 		38DF46C12B5FB18F0011747F /* LootDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF46C02B5FB18F0011747F /* LootDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		38D5B18E2B63E337000FF757 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		38D5B1902B63E33F000FF757 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		38D5B1922B63E3D3000FF757 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		38D5B1952B63E865000FF757 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		38DF46C02B5FB18F0011747F /* LootDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,17 +77,10 @@
 		385F74F52B5A7AD500B0D26A /* Looter */ = {
 			isa = PBXGroup;
 			children = (
+				38D5B1942B63E80A000FF757 /* Views */,
 				385F74F62B5A7AD500B0D26A /* LooterApp.swift */,
-				38022ED72B63987B00F2FBE8 /* OnboardingView.swift */,
-				38022EDB2B639C9500F2FBE8 /* OnBoardingPageView.swift */,
 				385F74F82B5A7AD500B0D26A /* LooterDocument.swift */,
-				385F74FA2B5A7AD500B0D26A /* ContentView.swift */,
-				38D5B18C2B63E32F000FF757 /* LootView.swift */,
 				38D5B1922B63E3D3000FF757 /* Inventory.swift */,
-				38D5B18E2B63E337000FF757 /* WishListView.swift */,
-				38D5B1902B63E33F000FF757 /* ProfileView.swift */,
-				385F75072B5A836000B0D26A /* AddItemView.swift */,
-				38DF46C02B5FB18F0011747F /* LootDetailView.swift */,
 				385F75092B5AB02600B0D26A /* LootItem.swift */,
 				385F74FC2B5A7AD700B0D26A /* Assets.xcassets */,
 				385F75012B5A7AD700B0D26A /* Info.plist */,
@@ -100,6 +95,22 @@
 				385F74FF2B5A7AD700B0D26A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38D5B1942B63E80A000FF757 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38D5B1902B63E33F000FF757 /* ProfileView.swift */,
+				38DF46C02B5FB18F0011747F /* LootDetailView.swift */,
+				38D5B18E2B63E337000FF757 /* WishListView.swift */,
+				385F75072B5A836000B0D26A /* AddItemView.swift */,
+				38D5B18C2B63E32F000FF757 /* LootView.swift */,
+				385F74FA2B5A7AD500B0D26A /* ContentView.swift */,
+				38022EDB2B639C9500F2FBE8 /* OnBoardingPageView.swift */,
+				38022ED72B63987B00F2FBE8 /* OnboardingView.swift */,
+				38D5B1952B63E865000FF757 /* EditItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				38022ED82B63987B00F2FBE8 /* OnboardingView.swift in Sources */,
 				38DF46C12B5FB18F0011747F /* LootDetailView.swift in Sources */,
 				385F750A2B5AB02600B0D26A /* LootItem.swift in Sources */,
+				38D5B1962B63E865000FF757 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
