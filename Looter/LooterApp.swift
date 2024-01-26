@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct LooterApp: App {
     var body: some Scene {
-        DocumentGroup(newDocument: LooterDocument()) { file in
+        WindowGroup {
             ContentView()
         }
     }
