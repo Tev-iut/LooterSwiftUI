@@ -98,7 +98,7 @@ struct LootDetailView: View {
             }
         }
         .sheet(isPresented: $showAddItemView, content: {
-            EditItemView()
+            EditItemView(item: item)
         })
         .toolbar(content: {
             ToolbarItem(placement: ToolbarItemPlacement.automatic) {
