@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38022ED82B63987B00F2FBE8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38022ED72B63987B00F2FBE8 /* OnboardingView.swift */; };
+		38022EDC2B639C9500F2FBE8 /* OnBoardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38022EDB2B639C9500F2FBE8 /* OnBoardingPageView.swift */; };
 		385F74F72B5A7AD500B0D26A /* LooterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F74F62B5A7AD500B0D26A /* LooterApp.swift */; };
 		385F74F92B5A7AD500B0D26A /* LooterDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F74F82B5A7AD500B0D26A /* LooterDocument.swift */; };
 		385F74FB2B5A7AD500B0D26A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F74FA2B5A7AD500B0D26A /* ContentView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38022ED72B63987B00F2FBE8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		38022EDB2B639C9500F2FBE8 /* OnBoardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageView.swift; sourceTree = "<group>"; };
 		385F74F32B5A7AD500B0D26A /* Looter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Looter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385F74F62B5A7AD500B0D26A /* LooterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooterApp.swift; sourceTree = "<group>"; };
 		385F74F82B5A7AD500B0D26A /* LooterDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooterDocument.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				385F74F62B5A7AD500B0D26A /* LooterApp.swift */,
+				38022ED72B63987B00F2FBE8 /* OnboardingView.swift */,
+				38022EDB2B639C9500F2FBE8 /* OnBoardingPageView.swift */,
 				385F74F82B5A7AD500B0D26A /* LooterDocument.swift */,
 				385F74FA2B5A7AD500B0D26A /* ContentView.swift */,
 				385F75072B5A836000B0D26A /* AddItemView.swift */,
@@ -154,11 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38022EDC2B639C9500F2FBE8 /* OnBoardingPageView.swift in Sources */,
 				385F74F72B5A7AD500B0D26A /* LooterApp.swift in Sources */,
 				385F750C2B5AB71800B0D26A /* Game.swift in Sources */,
 				385F74F92B5A7AD500B0D26A /* LooterDocument.swift in Sources */,
 				385F74FB2B5A7AD500B0D26A /* ContentView.swift in Sources */,
 				385F75082B5A836000B0D26A /* AddItemView.swift in Sources */,
+				38022ED82B63987B00F2FBE8 /* OnboardingView.swift in Sources */,
 				38DF46C12B5FB18F0011747F /* LootDetailView.swift in Sources */,
 				385F750A2B5AB02600B0D26A /* LootItem.swift in Sources */,
 			);

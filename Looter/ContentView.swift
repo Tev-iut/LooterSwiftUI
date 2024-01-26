@@ -57,6 +57,10 @@ struct ContentView: View {
                     }
                 })
             }
+        @AppStorage("isOnBoardingDone") var isOnBoardingDone: Bool = false
+        Button("Remttre le onboarding a false"){
+            isOnBoardingDone = false
+        }
     }
 }
 
