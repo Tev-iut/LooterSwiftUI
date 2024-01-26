@@ -19,9 +19,16 @@ struct OnBoardingPageView: View {
     @State var color: Color
     
     var body: some View {
-        VStack{
-            Text(title).font(.system(size: 40)).bold()
-            Text(description)
+        VStack {
+            
+            Text(title)
+                .font(
+                    .system(size: 80)
+                )
+                .bold()
+                .multilineTextAlignment(.center)
+            
+           
             ZStack {
                 Circle()
                     .frame(height: 200)
@@ -32,8 +39,12 @@ struct OnBoardingPageView: View {
                     .frame(height: 100)
                     .foregroundStyle(Color(.white))
             }
+            
+            Text(description)
+                .padding(25)
+            
             ZStack {
-                RoundedRectangle(cornerRadius: 25.0)
+                RoundedRectangle(cornerRadius: 15.0)
                     .frame(width: 100, height: 50)
                     .foregroundStyle(Color(.blue))
                 if (currentPage == 3) {
@@ -50,9 +61,10 @@ struct OnBoardingPageView: View {
             }
             
         }
+        .padding(5)
     }
 }
 
 //#Preview {
-//    OnBoardingPageView(title: "Titre", description: "Description", imageRef: "co6996", $state)
+//    OnBoardingPageView(title: "Page 3", description: "oe", imageRef: "iphone.case", currentPage: $step, color: .purple)
 //}
